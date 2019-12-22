@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data class="ItemRepoBinding">
+
         <variable
             name="vmdata"
             type="com.ao.retrofitrxjava.model.ResponseRepos" />
@@ -14,9 +15,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentPadding="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="4dp"
-        android:layout_marginBottom="8dp">
+        app:contentPadding="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,20 +28,20 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Nama Repo"
                 android:text="@{vmdata.name}"
-                 android:textSize="16sp"
-                android:textColor="#000" />
+                android:textColor="#000"
+                android:textSize="16sp"
+                tools:text="Nama Repo" />
 
             <TextView
                 android:id="@+id/tvDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                tools:text="Desc Repo"
                 android:text="@{vmdata.description}"
+                android:textColor="#000"
                 android:textSize="14sp"
-                android:textColor="#000" />
+                tools:text="Desc Repo" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

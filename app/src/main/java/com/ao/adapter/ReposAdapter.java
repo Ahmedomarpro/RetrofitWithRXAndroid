@@ -1,15 +1,15 @@
 package com.ao.adapter;
 
- import android.view.LayoutInflater;
- import android.view.ViewGroup;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
- import com.ao.retrofitrxjava.databinding.ItemRepoBinding;
- import com.ao.retrofitrxjava.model.ResponseRepos;
+import com.ao.retrofitrxjava.databinding.ItemRepoBinding;
+import com.ao.retrofitrxjava.model.ResponseRepos;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class ReposAdapter extends RecyclerView.Adapter<ReposAdapter.ViewHolder> 
 		return new ViewHolder(binding);*/
 
 		LayoutInflater layoutInflater1 = LayoutInflater.from(parent.getContext());
-		ItemRepoBinding  bin = ItemRepoBinding.inflate(layoutInflater1,parent,false);
+		ItemRepoBinding bin = ItemRepoBinding.inflate(layoutInflater1, parent, false);
 		return new ViewHolder(bin);
 	}
 
@@ -94,7 +94,7 @@ public class ReposAdapter extends RecyclerView.Adapter<ReposAdapter.ViewHolder> 
 	}*/
 	public static class ViewHolder extends RecyclerView.ViewHolder {
 		private TextView ntName, ntDes;
-		ItemRepoBinding binding ;
+		ItemRepoBinding binding;
 
 		public ViewHolder(@NonNull ItemRepoBinding binding) {
 			super(binding.getRoot());
